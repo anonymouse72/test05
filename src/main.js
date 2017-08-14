@@ -8,7 +8,6 @@ import vueResource from 'vue-resource'
 import '../statics/mui/css/mui.css';
 import '../statics/mui/css/icons-extra.css'
 
-// import '../statics/mui/js/mui.min.js'
 
 
 import mintUI from 'mint-ui'
@@ -27,6 +26,7 @@ Vue.use(vueResource);  //使用vueResource 对象才能自动在Vue对象实例�
 //2.0.1 加载图片预览组件
 import VuePreview from 'vue-preview'
 Vue.use(VuePreview);
+
 
 //2.0.1 在Vue上注册一个全局过滤器名称叫做 tolowercase1
 import moment from 'moment';

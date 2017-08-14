@@ -50,39 +50,31 @@
 
 <script>
 	//1.0 导入 subimgsilder.vue组件
-	import subimgsilder from '../subcomp/subimgsilder.vue';
-	import common from '../../kits/common.js'
-export default{
-	data(){
-		return {
-			// list: [{
-			// 			url: 'http://www.itcast.cn/subject/phoneweb/index.html',
-			// 			img: 'http://ofv795nmp.bkt.clouddn.com/vuelogobanner1.jpg'
-			// 		}, {
-			// 			url: 'http://www.itcast.cn/subject/phoneweb/index.html',
-			// 			img: 'http://ofv795nmp.bkt.clouddn.com/vuelogobanner2-1.jpg'
-			// 		}]
-		 		
-			list:[]
-		}
-	},
-	created(){
-		this.getlunbo(); //当home.vue组件创建完毕以后，调用数据请求
-	},
-	methods:{
-			getlunbo(){
-				var url = common.apihost+'/api/getlunbo';
-				this.$http.get(url).then(res=>{
-					//成功则将res.body.message中的数据赋值给this.list属性即可
-					this.list = res.body.message;
-				},res=>{
-					console.log('轮播图获取失败');
-				});
+	import subcomp from '../subcomp/subimgsilder.vue';
+	import common from '../../kits/common.js';
+	export default{
+		data(){
+			return {
+				list:[]
 			}
 		},
-	components:{
-		subimgsilder
-	}
+		created(){
+			this.getlunbo(); //当home.vue组件创建完毕以后，调用数据请求
+		},
+		methods:{
+				getlunbo(){
+					var url = common.apihost+'/api/getlunbo';
+					this.$http.get(url).then(res=>{
+						//成功则将res.body.message中的数据赋值给this.list属性即可
+						this.list = res.body.message;
+					},res=>{
+						console.log('轮播图获取失败');
+					});
+				}
+			},
+		components:{
+			subimgsilder
+		}
 }
 	
 </script>

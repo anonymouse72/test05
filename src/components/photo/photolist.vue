@@ -21,14 +21,14 @@
                         <img v-lazy="item.img_url">
                     </router-link>
                     <p>
-                        <span class="title" v-text="item.title"></span><br />
+                    <span class="title" v-text="item.title"></span><br />
                         {{item.zhaiyao}}
                     </p>
                 </li>
             </ul>
 
         </div>
-
+</div>
 </template>
 <style scoped>
 

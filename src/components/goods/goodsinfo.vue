@@ -199,7 +199,7 @@ import {setItem} from '../../kits/localStorageHelper.js'
                 var offset = el.offsetWidth; //设置这句话就能保证小球实时移动
                 //表示小球的动画进行到最后的状态
                 el.style.transform = 'translate3d(125px,327px,0)';
-                done();
+                // done();
             },
             afterEnter(el){
                 //表示小球的动画结束状态,要将控制小球显示和隐藏的变量isshow复位

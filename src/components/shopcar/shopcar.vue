@@ -75,13 +75,16 @@
 	}
 	.row .centerdiv{
 		flex: 0 0 75px;
+		padding: 5px;
 	}
+
 	.row .rightdiv{
 		flex: 1;
 	}
 	.row .rightdiv h4{
 		color:#0094ff;
 		padding: 5px 0;
+		font-size: 12px;
 	}
 	.row .rightdiv .subnumber{
 		display: inline;
@@ -109,6 +112,7 @@ export default{
 			selectedcount:0, //选择商品的总个数
 			values:[],  //用来存储每条数据的switch的值的,只要选中了，里面的存储的就是true
 			shopcarlist :[] //用来储存购物车中的商品[thumb_path:'http://..',count:1,id:89]
+			
 		}
 	},
 	created(){
@@ -148,12 +152,11 @@ export default{
 				//2.0 更新掉shopcarlist中当前商品对于的数量
 				this.updateshopcarlist(-1,resobj.goodsid);
 			}
-
 		},
 		add(resobj){
 			setItem({goodsid:resobj.goodsid,count:1});
 		},
-		updateshopcarlist(count,goodsid){
+		updateshopcarlist(count,goodsid){			
 			//1.0 找到商品的数据
 			for(let i = 0; i<this.shopcarlist.length;i++){
 				if(this.shopcarlist[i].id == goodsid){
@@ -214,6 +217,7 @@ export default{
 				}
 			});
 
+			console.log(111);
 			return totalAmount;
 		},
 		//删除商品数据
@@ -222,6 +226,7 @@ export default{
 			let index = this.shopcarlist.findIndex(c=>c.id == goodsid);
 			if(index >=0) {
 				this.shopcarlist.splice(index, 1);
+				this.values.splice(index, 1);
 			}
 
 			//2.0 删除localStorage中的数据
@@ -237,7 +242,7 @@ export default{
 			//1.0 统计当前选择的个数
 			let trueArr = 	this.values.filter(v=>v==true);
 			this.selectedcount = trueArr.length;
-
+			
 			//2.0 计算价格即可
 			return this.getTotalAmount();
 		}

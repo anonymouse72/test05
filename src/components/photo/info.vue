@@ -14,6 +14,7 @@
                 class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
                 <img class="preview-img"
                      :src="item.src" height="100" @click="$preview.open(index, imglist)">
+               
             </li>
         </ul>
         <!--3.0 展示图片的详细先描述-->
@@ -62,7 +63,7 @@
     import common from '../../kits/common.js';
     //1.0 导入图片组件
     import subcomment from '../subcomp/subcomment.vue';
-
+  
     export default{
         data(){
             return{

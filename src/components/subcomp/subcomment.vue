@@ -17,11 +17,7 @@
                 <div class="user" v-text="item.user_name"></div>
                 <div class="time">{{item.add_time | fmtdate('YYYY-MM-DD HH:mm:ss')}}</div>
             </div>
-            <!--<div class="outwarp">-->
-                <!--<div class="content" >这是一条评论这是一条评论</div>-->
-                <!--<div class="user">匿名用户</div>-->
-                <!--<div class="time">2018-292-12</div>-->
-            <!--</div>-->
+            
 
         </div>
 

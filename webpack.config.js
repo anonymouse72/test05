@@ -1,9 +1,13 @@
 //  这个文件就是webpack的默认配置文件，默认的名称为：webpack.config.js
 //  将来只需要在cmd面板上执行 webpack就会自动去查找webpack.config.js中的内容进行相关的打包操作
 var HtmlwebpackPlugin = require('html-webpack-plugin');
+var webpack = require('webpack');
 
 module.exports = {
-	entry:'./src/main.js', //webpack要打包的源文件是 src/main.js
+	entry:{
+	app:'./src/main.js',
+	vendor: ['vue', 'vue-router', 'mint-ui','vue-preview']
+	}, //webpack要打包的源文件是 src/main.js
 	output:{
 		path:'./dist/', //告诉webpack将来所有的打包文件都要放到这个目录下
 		filename:'build.js' //打包以后输出的文件名称,./dist/build.js代表输出到当前目录下
@@ -50,6 +54,12 @@ module.exports = {
 	      title: 'index',  //生成的页面标题
 	      filename: 'index.html', //生成的文件名称
      	  template: 'index1.html' //根据index1.html这个模板来生成(这个文件请你自己生成)
-	    })
+	    }),
+	    new webpack.optimize.CommonsChunkPlugin('p1.js',['vendor']),
+	     new webpack.optimize.UglifyJsPlugin({
+		      compress: {
+		        warnings: false
+		      }
+		    })
 	  ]
 }

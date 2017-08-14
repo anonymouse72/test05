@@ -1,18 +1,18 @@
 <template>
 	<div class="app">
 	<!-- 整个系统的头部 -->
-	<mt-header fixed title="传智.黑马vuejs内容管理系统"></mt-header>
-	 	<!--返回按钮-->
-		<div class="back" v-if="isShow">
-			<a @click="goback">返回</a>
-		</div>
-
-	<!-- 路由占位，将来所有的组件都是替换这个位置来实现页面的跳转
-	这也是一个单页系统的实现 -->
-	<router-view></router-view>
-
-	<!-- 整个系统的底部 -->
-	<nav  class="mui-bar mui-bar-tab">
+		<mt-header fixed title="实践系统-vuejs内容管理系统"></mt-header>
+		 	<!--返回按钮-->
+			<div class="back" v-if="isShow">
+				<a @click="goback">返回</a>
+			</div>
+	
+		<!-- 路由占位，将来所有的组件都是替换这个位置来实现页面的跳转
+		这也是一个单页系统的实现 -->
+		<router-view></router-view>
+	
+		<!-- 整个系统的底部 -->
+		<nav  class="mui-bar mui-bar-tab">
 		<router-link class="mui-tab-item" to="/Home">
 			<span class="mui-icon mui-icon-home"></span>
 				<span class="mui-tab-label">首页</span>
@@ -41,9 +41,9 @@
 </template>
 
 <script>
-	//6.0.2 注册commonvue.js(用来接收goodsinfo.vue中通过vueobj.$emit()发送过来的数据 )
+	// 注册commonvue.js(用来接收goodsinfo.vue中通过vueobj.$emit()发送过来的数据 )
 	import {vueobj} from './kits/commonvue.js';
-	//6.o.3 注册接收事件
+	// 注册接收事件
 	vueobj.$on('shopdata',function(data){
 		//由于vueobj和export default是不同的vue对象，所以在此处必须通过原生js来操作dom实现购物车数量的增加
 		let badge = document.getElementById('badge');
@@ -60,10 +60,7 @@
 				isShow:false //这个就是用来控制返回按钮显示和隐藏的
 			}
 		},
-//		created(){
-//  			//表示当前app.vue组件创建完毕以后被触发
-//			this.isShow = false;
-//		},
+
 		watch:{
 			//监控当前的路由对象 $route ，如果url中的路由规则发生了改变，那么就会触发这个方法
 			'$route':function(newval,oldval){
