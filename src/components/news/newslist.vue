@@ -17,29 +17,7 @@
         </ul>
     </div>
 </template>
-<style scoped>
-    .mui-table-view .mui-media-object{
-        max-width:62px;
-        height: 62px;
-        line-height: 62px;
-    }
-    .mui-table-view-cell{
-       padding-left: 10px;
-    }
-    .mui-ellipsis{
-       margin-top: 20px;
-    }
-    .mui-ellipsis {
-        color:#0094ff;
-        font-size: 12px;
-    }
 
-    .mui-ellipsis > span{
-        position: absolute;
-        top:50px;
-        right: 20px;
-    }
-</style>
 <script>
     import common from '../../kits/common.js';
 
@@ -70,3 +48,26 @@
         }
     }
 </script>
+<style scoped>
+    .mui-table-view .mui-media-object{
+        max-width:62px;
+        height: 62px;
+        line-height: 62px;
+    }
+    .mui-table-view-cell{
+       padding-left: 10px;
+    }
+    .mui-ellipsis{
+       margin-top: 20px;
+    }
+    .mui-ellipsis {
+        color:#0094ff;
+        font-size: 12px;
+    }
+
+    .mui-ellipsis > span{
+        position: absolute;
+        top:50px;
+        right: 20px;
+    }
+</style>
