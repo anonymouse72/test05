@@ -2,18 +2,6 @@
     <div class="tmpl">
       <!--利用MUI中的图文列表样式实现新闻列表-->
         <ul class="mui-table-view">
-            <!--<li  class="mui-table-view-cell mui-media">-->
-                <!--<a href="javascript:;">-->
-                    <!--<img class="mui-media-object mui-pull-left" src="../../../statics/images/menu3.png">-->
-                    <!--<div class="mui-media-body">-->
-                        <!--幸福-->
-                        <!--<p class='mui-ellipsis'>-->
-                            <!--发表时间:2017-1-10-->
-                            <!--<span>点击数：100</span>-->
-                        <!--</p>-->
-                    <!--</div>-->
-                <!--</a>-->
-            <!--</li>-->
             <li v-for="item in list" class="mui-table-view-cell mui-media">
                 <router-link v-bind='{to:"/news/newsinfo/"+item.id}'>
                     <img class="mui-media-object mui-pull-left" :src="item.img_url">
