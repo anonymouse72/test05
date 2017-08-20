@@ -1,6 +1,3 @@
-/*
- localStorage操作js文件
-* */
 
 const KEY = 'goods';
 
