@@ -4,6 +4,7 @@
     font-style: normal;
     src:  url('../fonts/mui-icons-extra.ttf') format('truetype'); /* iOS 4.1- */
 }
+
 .mui-icon-extra
 {
     font-family: MuiiconSpread;
@@ -15,6 +16,7 @@
     text-decoration: none;
     -webkit-font-smoothing: antialiased;
 }
+
 .mui-icon-extra-cold:before { content: "\e500"; }
 .mui-icon-extra-share:before { content: "\e200"; }
 .mui-icon-extra-class:before { content: "\e118"; }
