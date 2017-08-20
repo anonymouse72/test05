@@ -12,7 +12,7 @@
     export default{
         data(){
             return{
-                goodsid:0 //商品的id
+                goodsid:0 
             }
         },
         methods:{
