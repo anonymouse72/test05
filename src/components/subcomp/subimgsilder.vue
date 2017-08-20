@@ -9,8 +9,6 @@
     </div>
 </template>
 <style scoped>
-
-
     .img{
         width:100%;
         height:100%;
@@ -32,7 +30,7 @@
         width: 100%;
         height: 100%;
         display: none;
-        /*background-color: red;*/
+        
     }
     .mint-swipe-items-wrap > div.is-active {
         display: block;
