@@ -4,19 +4,6 @@
         <div class="content" v-html="info.content"></div>
     </div>
 </template>
-<style scoped>
-    .tmpl h3{
-        color:#0094ff;
-        padding: 10px;
-        border-bottom: 1px solid rgba(92,92,92,0.3);
-    }
-   .tmpl{
-       padding:5px;
-   }
-    .tmpl .content{
-        margin-top: 10px;
-    }
-</style>
 <script>
     import common from '../../kits/common.js'
     export default{
@@ -42,3 +29,18 @@
         }
     }
 </script>
+<style scoped>
+    .tmpl h3{
+        color:#0094ff;
+        padding: 10px;
+        border-bottom: 1px solid rgba(92,92,92,0.3);
+    }
+   .tmpl{
+       padding:5px;
+   }
+    .tmpl .content{
+        margin-top: 10px;
+    }
+</style>
+
+
