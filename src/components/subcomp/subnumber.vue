@@ -31,7 +31,11 @@
     export default{
         data(){
             return{
-                resObj:{type:ADD,goodsid:0,count:0}
+                resObj:{
+                    type:ADD,
+                    goodsid:0,
+                    count:0
+                }
             }
         },
         props:['initcount','goodsid'], //initcount:购物车中选择当前商品的数量  ，goodsid代表购物车商品的id
